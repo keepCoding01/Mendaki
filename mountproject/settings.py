@@ -45,10 +45,20 @@ INSTALLED_APPS = [
     'toko',  # Custom app for the shop
     'ckeditor',
     'ckeditor_uploader',
-    'django.contrib.humanize'
+    'django.contrib.humanize',
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
+import os
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.environ.get('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.environ.get('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
