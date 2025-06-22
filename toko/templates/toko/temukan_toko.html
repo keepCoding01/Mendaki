@@ -9,10 +9,10 @@
 <!-- Hero Background Slider -->
 <section class="fixed inset-0 z-0"
   x-data="{ currentSlide: 0, slides: [
-    '{% static 'images/bg-hero1.jpg' %}',
-    '{% static 'images/bg-hero2.jpg' %}',
-    '{% static 'images/bg-hero3.jpg' %}'
-  ] }"
+      'https://res.cloudinary.com/dsienul6c/image/upload/v1750560738/bg-hero2_fhfvow.jpg',
+      'https://res.cloudinary.com/dsienul6c/image/upload/v1750560738/bg-hero3_tgvcez.jpg',
+      'https://res.cloudinary.com/dsienul6c/image/upload/v1750560150/bg-hero1_d3qzs2.jpg'
+    ] }"
   x-init="setInterval(() => currentSlide = (currentSlide + 1) % slides.length, 5000)">
   <div class="absolute w-full h-full bg-cover bg-center transition-all duration-1000"
        :style="'background-image: url(' + slides[currentSlide] + ')'"></div>

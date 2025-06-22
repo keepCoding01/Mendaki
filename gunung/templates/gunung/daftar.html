@@ -5,10 +5,10 @@
 <!-- Hero Slider Background -->
 <section class="fixed top-0 left-0 w-full h-screen -z-10"
   x-data="{ currentSlide: 0, slides: [
-    '{% static 'images/bg-hero1.jpg' %}',
-    '{% static 'images/bg-hero2.jpg' %}',
-    '{% static 'images/bg-hero3.jpg' %}'
-  ] }"
+      'https://res.cloudinary.com/dsienul6c/image/upload/v1750560738/bg-hero2_fhfvow.jpg',
+      'https://res.cloudinary.com/dsienul6c/image/upload/v1750560738/bg-hero3_tgvcez.jpg',
+      'https://res.cloudinary.com/dsienul6c/image/upload/v1750560150/bg-hero1_d3qzs2.jpg'
+    ]}"
   x-init="setInterval(() => currentSlide = (currentSlide + 1) % slides.length, 5000)">
   
   <!-- Background Image -->
