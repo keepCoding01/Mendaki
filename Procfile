@@ -1,1 +1,1 @@
-web: gunicorn MountRentv2.wsgi --log-file -
+web: gunicorn mountproject.wsgi
